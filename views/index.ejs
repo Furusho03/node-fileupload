@@ -1,0 +1,26 @@
+<% include partials/header %>
+
+<h1 class="page-title">index page</h1>
+
+<a class="link" href="/post">post</a>
+
+<div class="main">
+    <% users.forEach(user => { %>
+        <div class="card">
+            <div class="title">
+                <p><strong>title</strong>: <%= user.title %></p>
+            </div>
+            <div class="desc">
+                <p><strong>description</strong>: <%= user.description %></p>
+            </div>
+            <div class="image">
+                <p><strong>image:</strong></p>
+                <img src="/<%= user.image %>">
+            </div>
+            <a class="link" href="/post">post</a>
+        </div>
+    <% }) %>
+</div>
+
+
+<% include partials/footer %>
